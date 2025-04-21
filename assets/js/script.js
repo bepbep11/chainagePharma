@@ -69,7 +69,7 @@ function initMap() {
     searchPlaces(userLocation);
   }
   
-
+}
 function updateMarker(location) {
   if (!userMarker) {
     userMarker = new google.maps.Marker({
@@ -224,6 +224,5 @@ function createMarker(place) {
       }
     });
   });
-}
 }
 
