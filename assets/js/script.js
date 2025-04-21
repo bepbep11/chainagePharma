@@ -68,33 +68,7 @@ function initMap() {
 
     searchPlaces(userLocation);
   }
-  // Créer le bouton "Ajouter cercle vert"
-const addGreenCircleControlDiv = document.createElement("div");
-
-const addGreenCircleControl = document.createElement("button");
-addGreenCircleControl.textContent = "➕ Cercle vert";
-addGreenCircleControl.style.backgroundColor = "#27ae60";
-addGreenCircleControl.style.color = "white";
-addGreenCircleControl.style.border = "none";
-addGreenCircleControl.style.padding = "10px";
-addGreenCircleControl.style.margin = "10px";
-addGreenCircleControl.style.borderRadius = "5px";
-addGreenCircleControl.style.cursor = "pointer";
-addGreenCircleControl.style.fontWeight = "bold";
-addGreenCircleControl.title = "Ajouter un cercle vert";
-
-addGreenCircleControlDiv.appendChild(addGreenCircleControl);
-
-// Ajouter le bouton en haut à gauche de la carte
-map.controls[google.maps.ControlPosition.TOP_LEFT].push(addGreenCircleControlDiv);
-
-// Comportement du bouton
-addGreenCircleControl.addEventListener("click", () => {
-  addGreenCircleMode = true;
-  addGreenCircleControl.textContent = "🟢 Cliquez sur la carte...";
-  addGreenCircleControl.style.backgroundColor = "#2ecc71";
-});
-}
+  
 
 function updateMarker(location) {
   if (!userMarker) {
@@ -149,7 +123,7 @@ function searchPlaces(location) {
         // Exclure certains types trop larges
         const isParapharmacy = place.types.includes("store");
 
-        return hasPharmacyType && isLikelyPharmacy;
+        return hasPharmacyType ;
       })
       .forEach(place => createMarker(place));
 
