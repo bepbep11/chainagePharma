@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <title>Find Pharmacies Near Me</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body onload="initMap()">
+    
+    <header>
+      <h1>Find Pharmacies Near Me11111</h1>
+    </header>
+    <div id="map-container">
+      <div id="map"></div>
+      <div class="loader" id="loader">
+        <img src="assets/images/loader.gif" alt="Loading..." />
+      </div>
+    </div>
+    <button id="clear-circles-btn">Clear Results</button>
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoVDzk_BHQ7hwOJdbHiVPFeVeh9x6xdac&callback=initMap&libraries=places,geometry,visualization&v=weekly"
+      async
+      defer
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7XPJYNHQ3D"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-7XPJYNHQ3D");
+    </script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+  <link rel="icon" type="image/png" href="assets/images/pharmacie.png" />  
+</html>
